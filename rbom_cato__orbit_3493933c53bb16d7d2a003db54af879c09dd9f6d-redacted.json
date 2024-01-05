@@ -1,0 +1,1634 @@
+{
+  "obom": {
+    "timestamp": "2024-01-05T16:33:04.110335251Z",
+    "hashes": [
+      {
+        "alg": "SHA-256",
+        "content": "23c311b46a19d4ba7ae031db34321278493298a161aa3e5b56a4cd7ed6669130"
+      }
+    ],
+    "hostRef": "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+    "scopeRef": "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz",
+    "services": [
+      {
+        "bom-ref": "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz",
+        "provider": {
+          "name": "aws",
+          "url": [
+            "https://aws.amazon.com"
+          ]
+        },
+        "group": "com.amazon.aws",
+        "name": "vpc-procap360-demo",
+        "properties": [
+          {
+            "name": "Arn",
+            "value": "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          },
+          {
+            "name": "ResourceId",
+            "value": "vpc-zzz"
+          },
+          {
+            "name": "ResourceType",
+            "value": "AWS::EC2::VPC"
+          },
+          {
+            "name": "AwsRegion",
+            "value": "us-east-1"
+          },
+          {
+            "name": "CidrBlock",
+            "value": "10.0.0.0/16"
+          },
+          {
+            "name": "State",
+            "value": "available"
+          }
+        ],
+        "services": [
+          {
+            "bom-ref": "arn:aws:ec2:us-east-1:xxx:internet-gateway/igw-bbb",
+            "provider": {
+              "name": "aws",
+              "url": [
+                "https://aws.amazon.com"
+              ]
+            },
+            "group": "com.amazon.aws",
+            "name": "vpc-procap360-demo",
+            "properties": [
+              {
+                "name": "Arn",
+                "value": "arn:aws:ec2:us-east-1:xxx:internet-gateway/igw-bbb"
+              },
+              {
+                "name": "ResourceId",
+                "value": "igw-bbb"
+              },
+              {
+                "name": "ResourceType",
+                "value": "AWS::EC2::InternetGateway"
+              },
+              {
+                "name": "InternetGatewayId",
+                "value": "igw-bbb"
+              }
+            ]
+          },
+          {
+            "bom-ref": "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "provider": {
+              "name": "aws",
+              "url": [
+                "https://aws.amazon.com"
+              ]
+            },
+            "group": "com.amazon.aws",
+            "name": "vpc-procap360-demo-public-us-east-1a",
+            "properties": [
+              {
+                "name": "Arn",
+                "value": "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc"
+              },
+              {
+                "name": "ResourceId",
+                "value": "subnet-ccc"
+              },
+              {
+                "name": "ResourceType",
+                "value": "AWS::EC2::Subnet"
+              },
+              {
+                "name": "SubnetId",
+                "value": "subnet-ccc"
+              },
+              {
+                "name": "CidrBlock",
+                "value": "10.0.4.0/24"
+              },
+              {
+                "name": "AvailabilityZone",
+                "value": "us-east-1a"
+              },
+              {
+                "name": "AvailableIpAddressCount",
+                "value": 250
+              },
+              {
+                "name": "State",
+                "value": "available"
+              }
+            ],
+            "services": [
+              {
+                "bom-ref": "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+                "provider": {
+                  "name": "aws",
+                  "url": [
+                    "https://aws.amazon.com"
+                  ]
+                },
+                "group": "com.amazon.aws",
+                "name": "vm-aio-procap360-demo",
+                "properties": [
+                  {
+                    "name": "Arn",
+                    "value": "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+                  },
+                  {
+                    "name": "ResourceId",
+                    "value": "i-ddd"
+                  },
+                  {
+                    "name": "ResourceType",
+                    "value": "AWS::EC2::Instance"
+                  },
+                  {
+                    "name": "ImageId",
+                    "value": "ami-image1"
+                  },
+                  {
+                    "name": "InstanceId",
+                    "value": "i-ddd"
+                  },
+                  {
+                    "name": "InstanceType",
+                    "value": "t3.medium"
+                  },
+                  {
+                    "name": "Architecture",
+                    "value": "x86_64"
+                  },
+                  {
+                    "name": "vCPUs",
+                    "value": 1
+                  },
+                  {
+                    "name": "ThreadsPerCore",
+                    "value": 2
+                  },
+                  {
+                    "name": "PrivateIpAddress",
+                    "value": "10.0.x.x"
+                  },
+                  {
+                    "name": "State",
+                    "value": "running"
+                  }
+                ]
+              },
+              {
+                "bom-ref": "arn:aws:ec2:us-east-1:xxx:network-interface/eni-eee",
+                "provider": {
+                  "name": "aws",
+                  "url": [
+                    "https://aws.amazon.com"
+                  ]
+                },
+                "group": "com.amazon.aws",
+                "name": "eni-eee",
+                "properties": [
+                  {
+                    "name": "Arn",
+                    "value": "arn:aws:ec2:us-east-1:xxx:network-interface/eni-eee"
+                  },
+                  {
+                    "name": "ResourceId",
+                    "value": "eni-eee"
+                  },
+                  {
+                    "name": "ResourceType",
+                    "value": "AWS::EC2::NetworkInterface"
+                  },
+                  {
+                    "name": "MacAddress",
+                    "value": "mac1"
+                  },
+                  {
+                    "name": "PrivateIpAddress",
+                    "value": "10.0.x.x"
+                  },
+                  {
+                    "name": "PrivateDnsName",
+                    "value": "ip-10-0-x-x.ec2.internal"
+                  },
+                  {
+                    "name": "Status",
+                    "value": "in-use"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bom-ref": "arn:aws:ec2:us-east-1:xxx:route-table/rtb-route1",
+            "provider": {
+              "name": "aws",
+              "url": [
+                "https://aws.amazon.com"
+              ]
+            },
+            "group": "com.amazon.aws",
+            "name": "vpc-procap360-demo-public",
+            "properties": [
+              {
+                "name": "Arn",
+                "value": "arn:aws:ec2:us-east-1:xxx:route-table/rtb-route1"
+              },
+              {
+                "name": "ResourceId",
+                "value": "rtb-route1"
+              },
+              {
+                "name": "ResourceType",
+                "value": "AWS::EC2::RouteTable"
+              },
+              {
+                "name": "RouteTableId",
+                "value": "rtb-route1"
+              },
+              {
+                "name": "Routes",
+                "value": [
+                  {
+                    "CarrierGatewayId": null,
+                    "CoreNetworkArn": null,
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "DestinationIpv6CidrBlock": null,
+                    "DestinationPrefixListId": null,
+                    "EgressOnlyInternetGatewayId": null,
+                    "GatewayId": "local",
+                    "InstanceId": null,
+                    "InstanceOwnerId": null,
+                    "LocalGatewayId": null,
+                    "NatGatewayId": null,
+                    "NetworkInterfaceId": null,
+                    "Origin": "CreateRouteTable",
+                    "State": "active",
+                    "TransitGatewayId": null,
+                    "VpcPeeringConnectionId": null
+                  },
+                  {
+                    "CarrierGatewayId": null,
+                    "CoreNetworkArn": null,
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "DestinationIpv6CidrBlock": null,
+                    "DestinationPrefixListId": null,
+                    "EgressOnlyInternetGatewayId": null,
+                    "GatewayId": "igw-bbb",
+                    "InstanceId": null,
+                    "InstanceOwnerId": null,
+                    "LocalGatewayId": null,
+                    "NatGatewayId": null,
+                    "NetworkInterfaceId": null,
+                    "Origin": "CreateRoute",
+                    "State": "active",
+                    "TransitGatewayId": null,
+                    "VpcPeeringConnectionId": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bom-ref": "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn",
+            "provider": {
+              "name": "aws",
+              "url": [
+                "https://aws.amazon.com"
+              ]
+            },
+            "group": "com.amazon.aws",
+            "name": "acl-nnnn",
+            "properties": [
+              {
+                "name": "Arn",
+                "value": "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn"
+              },
+              {
+                "name": "ResourceId",
+                "value": "acl-nnnn"
+              },
+              {
+                "name": "ResourceType",
+                "value": "AWS::EC2::NetworkAcl"
+              },
+              {
+                "name": "NetworkAclId",
+                "value": "acl-nnnn"
+              },
+              {
+                "name": "IsDefault",
+                "value": true
+              },
+              {
+                "name": "Entries",
+                "value": [
+                  {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": true,
+                    "IcmpTypeCode": null,
+                    "Ipv6CidrBlock": null,
+                    "PortRange": null,
+                    "Protocol": "-1",
+                    "RuleAction": "allow",
+                    "RuleNumber": 100
+                  },
+                  {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": true,
+                    "IcmpTypeCode": null,
+                    "Ipv6CidrBlock": null,
+                    "PortRange": null,
+                    "Protocol": "-1",
+                    "RuleAction": "deny",
+                    "RuleNumber": 32767
+                  },
+                  {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": false,
+                    "IcmpTypeCode": null,
+                    "Ipv6CidrBlock": null,
+                    "PortRange": null,
+                    "Protocol": "-1",
+                    "RuleAction": "allow",
+                    "RuleNumber": 100
+                  },
+                  {
+                    "CidrBlock": "0.0.0.0/0",
+                    "Egress": false,
+                    "IcmpTypeCode": null,
+                    "Ipv6CidrBlock": null,
+                    "PortRange": null,
+                    "Protocol": "-1",
+                    "RuleAction": "deny",
+                    "RuleNumber": 32767
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bom-ref": "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "provider": {
+              "name": "aws",
+              "url": [
+                "https://aws.amazon.com"
+              ]
+            },
+            "group": "com.amazon.aws",
+            "name": "sg-ppppp",
+            "properties": [
+              {
+                "name": "Arn",
+                "value": "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp"
+              },
+              {
+                "name": "ResourceId",
+                "value": "sg-ppppp"
+              },
+              {
+                "name": "ResourceType",
+                "value": "AWS::EC2::SecurityGroup"
+              },
+              {
+                "name": "IpPermissions",
+                "value": [
+                  {
+                    "FromPort": 80,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "0.0.0.0/0",
+                        "Description": "http"
+                      }
+                    ],
+                    "IpRanges": [
+                      "0.0.0.0/0"
+                    ],
+                    "Ipv6Ranges": [
+                      {
+                        "CidrIpv6": "::/0",
+                        "Description": "http"
+                      }
+                    ],
+                    "PrefixListIds": [],
+                    "ToPort": 80,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 22,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "10.0.4.0/24",
+                        "Description": "ssh access within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.1.0/24",
+                        "Description": "ssh access within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.6.0/24",
+                        "Description": "ssh access within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.3.0/24",
+                        "Description": "ssh access within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.2.0/24",
+                        "Description": "ssh access within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.5.0/24",
+                        "Description": "ssh access within vpc"
+                      },
+                      {
+                        "CidrIp": "100.0.0.0/32",
+                        "Description": "ssh access within vpc"
+                      }
+                    ],
+                    "IpRanges": [
+                      "10.0.4.0/24",
+                      "10.0.1.0/24",
+                      "10.0.6.0/24",
+                      "10.0.3.0/24",
+                      "10.0.2.0/24",
+                      "10.0.5.0/24",
+                      "100.0.0.0/32"
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": [],
+                    "ToPort": 22,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 5672,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "10.0.2.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.5.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.1.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.3.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.4.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.6.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "100.0.0.0/32",
+                        "Description": "rabbitmq connection within vpc"
+                      }
+                    ],
+                    "IpRanges": [
+                      "10.0.2.0/24",
+                      "10.0.5.0/24",
+                      "10.0.1.0/24",
+                      "10.0.3.0/24",
+                      "10.0.4.0/24",
+                      "10.0.6.0/24",
+                      "100.0.0.0/32"
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": [],
+                    "ToPort": 5672,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 7233,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "100.0.0.0/32",
+                        "Description": "temporal connection from dev env"
+                      }
+                    ],
+                    "IpRanges": [
+                      "100.0.0.0/32"
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": [],
+                    "ToPort": 7233,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 8070,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "0.0.0.0/0",
+                        "Description": "nexusiq connection within vpc"
+                      }
+                    ],
+                    "IpRanges": [
+                      "0.0.0.0/0"
+                    ],
+                    "Ipv6Ranges": [
+                      {
+                        "CidrIpv6": "::/0",
+                        "Description": "nexusiq connection within vpc"
+                      }
+                    ],
+                    "PrefixListIds": [],
+                    "ToPort": 8070,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 8443,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "0.0.0.0/0",
+                        "Description": "nexusiq connection within vpc"
+                      }
+                    ],
+                    "IpRanges": [
+                      "0.0.0.0/0"
+                    ],
+                    "Ipv6Ranges": [
+                      {
+                        "CidrIpv6": "::/0",
+                        "Description": "nexusiq connection within vpc"
+                      }
+                    ],
+                    "PrefixListIds": [],
+                    "ToPort": 8443,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 7473,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "10.0.4.0/24",
+                        "Description": "eno4j browser http connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.5.0/24",
+                        "Description": "eno4j browser http connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.1.0/24",
+                        "Description": "eno4j browser http connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.2.0/24",
+                        "Description": "eno4j browser http connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.3.0/24",
+                        "Description": "eno4j browser http connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.6.0/24",
+                        "Description": "eno4j browser http connection within vpc"
+                      },
+                      {
+                        "CidrIp": "100.0.0.0/32",
+                        "Description": "eno4j browser http connection within vpc"
+                      }
+                    ],
+                    "IpRanges": [
+                      "10.0.4.0/24",
+                      "10.0.5.0/24",
+                      "10.0.1.0/24",
+                      "10.0.2.0/24",
+                      "10.0.3.0/24",
+                      "10.0.6.0/24",
+                      "100.0.0.0/32"
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": [],
+                    "ToPort": 7473,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 5671,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "10.0.2.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.5.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.1.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.6.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.3.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.4.0/24",
+                        "Description": "rabbitmq connection within vpc"
+                      },
+                      {
+                        "CidrIp": "100.0.0.0/32",
+                        "Description": "rabbitmq connection within vpc"
+                      }
+                    ],
+                    "IpRanges": [
+                      "10.0.2.0/24",
+                      "10.0.5.0/24",
+                      "10.0.1.0/24",
+                      "10.0.6.0/24",
+                      "10.0.3.0/24",
+                      "10.0.4.0/24",
+                      "100.0.0.0/32"
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": [],
+                    "ToPort": 5671,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 443,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "0.0.0.0/0",
+                        "Description": "https"
+                      }
+                    ],
+                    "IpRanges": [
+                      "0.0.0.0/0"
+                    ],
+                    "Ipv6Ranges": [
+                      {
+                        "CidrIpv6": "::/0",
+                        "Description": "https"
+                      }
+                    ],
+                    "PrefixListIds": [],
+                    "ToPort": 443,
+                    "UserIdGroupPairs": []
+                  },
+                  {
+                    "FromPort": 7687,
+                    "IpProtocol": "tcp",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "10.0.3.0/24",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.5.0/24",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.4.0/24",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.1.0/24",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.2.0/24",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "10.0.6.0/24",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "20.0.0.0/32",
+                        "Description": "neo4j connection from azure demo"
+                      },
+                      {
+                        "CidrIp": "100.0.0.0/32",
+                        "Description": "neo4j bolt connection within vpc"
+                      },
+                      {
+                        "CidrIp": "34.0.0.0/32",
+                        "Description": "neo4j from gcp"
+                      },
+                      {
+                        "CidrIp": "34.0.0.0/32",
+                        "Description": "gcp sit kubernetes procap-worker"
+                      },
+                      {
+                        "CidrIp": "104.0.0.0/32",
+                        "Description": "gcp sit kubernetes procap-api"
+                      },
+                      {
+                        "CidrIp": "34.0.0.0/32",
+                        "Description": "gcp sit kubernetes"
+                      },
+                      {
+                        "CidrIp": "104.0.0.0/32",
+                        "Description": "gcp kubernetes procap-worker 2"
+                      },
+                      {
+                        "CidrIp": "54.0.0.0/32",
+                        "Description": "aws kubernetes procap-api"
+                      }
+                    ],
+                    "IpRanges": [
+                      "10.0.3.0/24",
+                      "10.0.5.0/24",
+                      "10.0.4.0/24",
+                      "10.0.1.0/24",
+                      "10.0.2.0/24",
+                      "10.0.6.0/24",
+                      "20.0.0.0/32",
+                      "100.0.0.0/32",
+                      "34.0.0.0/32",
+                      "34.0.0.0/32",
+                      "104.0.0.0/32",
+                      "34.0.0.0/32",
+                      "104.0.0.0/32",
+                      "54.0.0.0/32"
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": [],
+                    "ToPort": 7687,
+                    "UserIdGroupPairs": []
+                  }
+                ]
+              },
+              {
+                "name": "IpPermissionsEgress",
+                "value": [
+                  {
+                    "FromPort": null,
+                    "IpProtocol": "-1",
+                    "Ipv4Ranges": [
+                      {
+                        "CidrIp": "0.0.0.0/0",
+                        "Description": "all traffic"
+                      }
+                    ],
+                    "IpRanges": [
+                      "0.0.0.0/0"
+                    ],
+                    "Ipv6Ranges": [
+                      {
+                        "CidrIpv6": "::/0",
+                        "Description": "all traffic"
+                      }
+                    ],
+                    "PrefixListIds": [],
+                    "ToPort": null,
+                    "UserIdGroupPairs": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bom-ref": "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+        "provider": {
+          "name": "aws",
+          "url": [
+            "https://aws.amazon.com"
+          ]
+        },
+        "group": "com.amazon.aws",
+        "name": "vm-aio-procap360-demo",
+        "properties": [
+          {
+            "name": "Arn",
+            "value": "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          },
+          {
+            "name": "ResourceId",
+            "value": "vol-vvvvv"
+          },
+          {
+            "name": "ResourceType",
+            "value": "AWS::EC2::Volume"
+          },
+          {
+            "name": "AvailabilityZone",
+            "value": "us-east-1a"
+          },
+          {
+            "name": "VolumeId",
+            "value": "vol-vvvvv"
+          },
+          {
+            "name": "VolumeType",
+            "value": "gp2"
+          },
+          {
+            "name": "Size",
+            "value": 12
+          },
+          {
+            "name": "Iops",
+            "value": 100
+          },
+          {
+            "name": "Encrypted",
+            "value": false
+          },
+          {
+            "name": "State",
+            "value": "in-use"
+          }
+        ]
+      },
+      {
+        "bom-ref": "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx",
+        "provider": {
+          "name": "aws",
+          "url": [
+            "https://aws.amazon.com"
+          ]
+        },
+        "group": "com.amazon.aws",
+        "name": "vm-aio-procap360-demo--data",
+        "properties": [
+          {
+            "name": "Arn",
+            "value": "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          },
+          {
+            "name": "ResourceId",
+            "value": "vol-xxxxx"
+          },
+          {
+            "name": "ResourceType",
+            "value": "AWS::EC2::Volume"
+          },
+          {
+            "name": "AvailabilityZone",
+            "value": "us-east-1a"
+          },
+          {
+            "name": "VolumeId",
+            "value": "vol-xxxxx"
+          },
+          {
+            "name": "VolumeType",
+            "value": "gp2"
+          },
+          {
+            "name": "Size",
+            "value": 15
+          },
+          {
+            "name": "Iops",
+            "value": 100
+          },
+          {
+            "name": "Encrypted",
+            "value": true
+          },
+          {
+            "name": "State",
+            "value": "in-use"
+          }
+        ]
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "id": "EC2.28",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "low"
+          }
+        ],
+        "description": "EBS volumes should be in a backup plan",
+        "detail": "This control evaluates if an Amazon EBS volume in 'in-use' state is covered by a backup plan. The control fails if an EBS volume isn’t covered by a backup plan. If you set the 'backupVaultLockCheck' parameter equal to 'true', the control passes only if the EBS volume is backed up in an AWS Backup locked vault.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.28/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          },
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          }
+        ]
+      },
+      {
+        "id": "SSM.1",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "medium"
+          }
+        ],
+        "description": "EC2 instances should be managed by AWS Systems Manager",
+        "detail": "This AWS control checks whether the Amazon EC2 instances in your account are managed by AWS Systems Manager.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/SSM.1/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          }
+        ]
+      },
+      {
+        "id": "EC2.6",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "medium"
+          }
+        ],
+        "description": "VPC flow logging should be enabled in all VPCs",
+        "detail": "This control checks whether Amazon Virtual Private Cloud flow logs are found and enabled for Amazon VPCs. The traffic type is set to 'Reject'.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.6/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          }
+        ]
+      },
+      {
+        "id": "EC2.21",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "medium"
+          }
+        ],
+        "description": "Network ACLs should not allow ingress from 0.0.0.0/0 to port 22 or port 3389",
+        "detail": "This control checks whether a network access control list (NACL) allows unrestricted access to the default ports for SSH/RDP ingress traffic. The rule fails if a NACL inbound entry allows a source CIDR block of '0.0.0.0/0' or '::/0' for ports 22 or 3389",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.21/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn"
+          }
+        ]
+      },
+      {
+        "id": "EC2.8",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "high"
+          }
+        ],
+        "description": "EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)",
+        "detail": "This control checks whether your Amazon Elastic Compute Cloud (Amazon EC2) instance metadata version is configured with Instance Metadata Service Version 2 (IMDSv2). The control passes if HttpTokens is set to required for IMDSv2. The control fails if HttpTokens is set to optional.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.8/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          }
+        ]
+      },
+      {
+        "id": "EC2.10",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "medium"
+          }
+        ],
+        "description": "Amazon EC2 should be configured to use VPC endpoints that are created for the Amazon EC2 service",
+        "detail": "This control checks whether a service endpoint for Amazon EC2 is created for each VPC. The control fails if a VPC does not have a VPC endpoint created for the Amazon EC2 service.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.10/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          }
+        ]
+      },
+      {
+        "id": "EC2.3",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "medium"
+          }
+        ],
+        "description": "Attached EBS volumes should be encrypted at-rest",
+        "detail": "This AWS control checks whether the EBS volumes that are in an attached state are encrypted.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.3/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          }
+        ]
+      },
+      {
+        "id": "EC2.9",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "high"
+          }
+        ],
+        "description": "EC2 instances should not have a public IPv4 address",
+        "detail": "This control checks whether EC2 instances have a public IP address. The control fails if the publicIp field is present in the EC2 instance configuration item. This control applies to IPv4 addresses only.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.9/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          }
+        ]
+      },
+      {
+        "id": "EC2.18",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "high"
+          }
+        ],
+        "description": "Security groups should only allow unrestricted incoming traffic for authorized ports",
+        "detail": "This control checks whether an Amazon EC2 security group permits unrestricted incoming traffic from unauthorized ports. The control status is determined as follows: If you use the default value for 'authorizedTcpPorts', the control fails if the security group permits unrestricted incoming traffic from any port other than ports 80 and 443; If you provide custom values for 'authorizedTcpPorts' or 'authorizedUdpPorts', the control fails if the security group permits unrestricted incoming traffic from any unlisted port; If no parameter is used, the control fails for any security group that has an unrestricted inbound traffic rule.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.18/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp"
+          }
+        ]
+      },
+      {
+        "id": "EC2.15",
+        "source": {
+          "name": "AWS Security Hub"
+        },
+        "ratings": [
+          {
+            "source": {
+              "name": "AWS Security Hub"
+            },
+            "severity": "medium"
+          }
+        ],
+        "description": "EC2 subnets should not automatically assign public IP addresses",
+        "detail": "This control checks if the assignment of public IPs in Amazon Virtual Private Cloud (VPC) subnets have the MapPublicIpOnLaunch set to FALSE. The control will pass if the flag is set to FALSE.",
+        "recommendation": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+        "advisories": [
+          {
+            "title": "remediation",
+            "url": "https://docs.aws.amazon.com/console/securityhub/EC2.15/remediation"
+          }
+        ],
+        "tools": [
+          {
+            "vendor": "AWS",
+            "name": "AWS Security Hub"
+          }
+        ],
+        "affects": [
+          {
+            "ref": "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc"
+          }
+        ]
+      }
+    ]
+  },
+  "compliances": [
+    {
+      "standardId": "NIST.800-53.r5",
+      "failedControls": [
+        {
+          "controlId": "ac-3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ac-3.7",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ac-3.15",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "ac-4",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ac-4.21",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ac-4.26",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ac-6",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ac-21",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "au-2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "au-3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "au-6.3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "au-6.4",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "au-12",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ca-7",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "ca-9.1",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "cm-2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn"
+          ]
+        },
+        {
+          "controlId": "cm-2.2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn"
+          ]
+        },
+        {
+          "controlId": "cm-3.6",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "cm-7",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn"
+          ]
+        },
+        {
+          "controlId": "cm-8",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "cm-8.1",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "cm-8.2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "cm-8.3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "cp-6",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "cp-6.1",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "cp-6.2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "cp-9",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "cp-10",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "sa-3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "sa-15.2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "sa-15.8",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "sc-5.2",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "sc-7",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-7.3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-7.4",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-7.5",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp"
+          ]
+        },
+        {
+          "controlId": "sc-7.9",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc"
+          ]
+        },
+        {
+          "controlId": "sc-7.10",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "sc-7.11",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-7.16",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-7.20",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-7.21",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd",
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn",
+            "arn:aws:ec2:us-east-1:xxx:security-group/sg-ppppp",
+            "arn:aws:ec2:us-east-1:xxx:subnet/subnet-ccc",
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "sc-13",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "sc-28",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "sc-28.1",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "si-2.3",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:instance/i-ddd"
+          ]
+        },
+        {
+          "controlId": "si-7.6",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv"
+          ]
+        },
+        {
+          "controlId": "si-7.8",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "si-12",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        },
+        {
+          "controlId": "si-13.5",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-vvvvv",
+            "arn:aws:ec2:us-east-1:xxx:volume/vol-xxxxx"
+          ]
+        }
+      ]
+    },
+    {
+      "standardId": "CIS AWS Foundations Benchmark v1.4.0",
+      "failedControls": [
+        {
+          "controlId": "3.9",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:vpc/vpc-zzz"
+          ]
+        },
+        {
+          "controlId": "5.1",
+          "resourceIds": [
+            "arn:aws:ec2:us-east-1:xxx:network-acl/acl-nnnn"
+          ]
+        }
+      ]
+    }
+  ],
+  "RawData": null
+}
